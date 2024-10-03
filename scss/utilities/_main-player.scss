@@ -38,9 +38,12 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      input {
+        width: 10.2rem;
+      }
     }
   }
-  input {
+  .progressAudio {
     position: absolute;
     bottom: 0;
   }

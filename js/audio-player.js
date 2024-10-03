@@ -1,8 +1,14 @@
 const buttons = document.querySelectorAll(".playPause");
+const mainPlayPause = document.querySelector("#mainPlayPause");
+const mainProgress = document.querySelector("#mainProgress");
+const mainIcon = document.querySelector("#mainIcon");
+const mainName = document.querySelector("#mainName");
+const mainAuthor = document.querySelector("#mainAuthor");
+mainPlayPause.disabled = true;
 let isPause = true;
 
 // Global variable to keep track of the currently playing audio
-let tmp;
+let currentAudio;
 
 buttons.forEach((button, i) => {
   const audio = document.querySelector(`audio[data-player="${i}"]`);
@@ -20,11 +26,30 @@ buttons.forEach((button, i) => {
   });
 
   button.addEventListener("click", () => {
+    if (mainPlayPause.disabled == true) {
+      mainPlayPause.classList.add("btn-orange");
+      mainPlayPause.classList.remove("btn-gray");
+      mainPlayPause.disabled = false;
+    }
+
     // Check if there's a different audio currently playing
-    if (tmp != null) {
-      if (tmp !== i) {
-        const tmpAudio = document.querySelector(`audio[data-player="${tmp}"]`);
-        const tmpIcon = document.querySelector(`img[data-player="${tmp}"]`);
+    if (currentAudio != null) {
+      if (currentAudio !== i) {
+        const tmpAudio = document.querySelector(
+          `audio[data-player="${currentAudio}"]`
+        );
+        const tmpIcon = document.querySelector(
+          `img[data-player="${currentAudio}"]`
+        );
+        const tmpName = document.querySelector(
+          `.nameAudio[data-player="${currentAudio}"]`
+        );
+        const tmpAuthor = document.querySelector(
+          `.authorAudio[data-player="${currentAudio}"]`
+        );
+
+        mainName.textContent = tmpName.textContent;
+        mainAuthor.textContent = tmpAuthor.textContent;
 
         // Pause the old audio and reset its time
         tmpAudio.pause();
@@ -32,18 +57,30 @@ buttons.forEach((button, i) => {
         tmpIcon.src = "public/icons/play-fill.svg";
         isPause = true;
       }
+    } else {
+      const tmpName = document.querySelector(`.nameAudio[data-player="${i}"]`);
+      const tmpAuthor = document.querySelector(
+        `.authorAudio[data-player="${i}"]`
+      );
+
+      mainName.textContent = tmpName.textContent;
+      mainAuthor.textContent = tmpAuthor.textContent;
     }
-    tmp = i;
+
     if (isPause) {
       // play and pause audio
       audio.play();
       icon.src = "public/icons/pause-fill.svg";
+      mainIcon.src = "public/icons/pause-fill.svg";
       isPause = false;
     } else {
       audio.pause();
       icon.src = "public/icons/play-fill.svg";
+      mainIcon.src = "public/icons/play-fill.svg";
       isPause = true;
     }
+
+    currentAudio = i;
   });
 
   audio.addEventListener("timeupdate", () => {
@@ -51,6 +88,7 @@ buttons.forEach((button, i) => {
     currentTime.textContent = formatTime(audio.currentTime);
     // update progress
     progressBar.value = (audio.currentTime / audio.duration) * 100;
+    mainProgress.value = (audio.currentTime / audio.duration) * 100;
   });
 
   progressBar.addEventListener("input", () => {
@@ -58,6 +96,30 @@ buttons.forEach((button, i) => {
     const newTime = (progress / 100) * audio.duration;
     audio.currentTime = newTime;
   });
+});
+
+mainPlayPause.addEventListener("click", () => {
+  const audio = document.querySelector(`audio[data-player="${currentAudio}"]`);
+  const icon = document.querySelector(`img[data-player="${currentAudio}"]`);
+  if (isPause) {
+    // play and pause audio
+    audio.play();
+    icon.src = "public/icons/pause-fill.svg";
+    mainIcon.src = "public/icons/pause-fill.svg";
+    isPause = false;
+  } else {
+    audio.pause();
+    icon.src = "public/icons/play-fill.svg";
+    mainIcon.src = "public/icons/play-fill.svg";
+    isPause = true;
+  }
+});
+
+mainProgress.addEventListener("input", () => {
+  const audio = document.querySelector(`audio[data-player="${currentAudio}"]`);
+  const progress = parseFloat(mainProgress.value);
+  const newTime = (progress / 100) * audio.duration;
+  audio.currentTime = newTime;
 });
 
 function formatTime(s) {

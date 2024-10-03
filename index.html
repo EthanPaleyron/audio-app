@@ -68,15 +68,15 @@
         </div>
       </section> -->
 
-      <!-- <div class="players">
+      <div class="players">
         <article class="player">
           <img src="public/Image.png" alt="image">
           <div class="player__content_progress">
             <div class="player__content">
               <div class="player__content__infos">
                 <div>
-                  <h2>Nom du récit sur une thématique</h2>
-                  <p>Nom prénom de l'auteur</p>
+                  <h2 class="nameAudio" data-player="0">Nom du récit sur une thématique</h2>
+                  <p class="authorAudio" data-player="0">Nom prénom de l'auteur</p>
                 </div>
                 <p><span class="currentTime" data-player="0">0 min 00 sec</span> sur <span class="totalTime"
                     data-player="0"></span>
@@ -102,8 +102,8 @@
             <div class="player__content">
               <div class="player__content__infos">
                 <div>
-                  <h2>Nom du récit sur une thématique</h2>
-                  <p>Nom prénom de l'auteur</p>
+                  <h2 class="nameAudio" data-player="1">Nom du récit sur une thématique</h2>
+                  <p class="authorAudio" data-player="1">Nom prénom de l'auteur</p>
                 </div>
                 <p><span class="currentTime" data-player="1">0 min 00 sec</span> sur <span class="totalTime"
                     data-player="1"></span>
@@ -122,9 +122,9 @@
             Your browser does not support the audio element.
           </audio>
         </article>
-      </div> -->
+      </div>
 
-      <section class="other-categories">
+      <!-- <section class="other-categories">
         <div class="other-categories__title">
           <h2>Dans d'autre catégories</h2>
           <div>
@@ -132,6 +132,7 @@
             <button><img src="public/icons/caret-right.svg" alt="droite"></button>
           </div>
         </div>
+
         <div class="other-categories__audios">
           <article class="card-audio">
             <div>
@@ -141,32 +142,8 @@
             </div>
             <h3>Titre de l'audio</h3>
           </article>
-          <article class="card-audio">
-            <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-              <span class="categorie">Categorie</span>
-            </div>
-            <h3>Titre de l'audio</h3>
-          </article>
-          <article class="card-audio">
-            <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-              <span class="categorie">Categorie</span>
-            </div>
-            <h3>Titre de l'audio</h3>
-          </article>
-          <article class="card-audio">
-            <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-              <span class="categorie">Categorie</span>
-            </div>
-            <h3>Titre de l'audio</h3>
-          </article>
         </div>
-      </section>
+      </section> -->
     </div>
 
     <article class="main-player">
@@ -174,23 +151,26 @@
       <div class="main-player__content_progress">
         <div class="main-player__content">
           <div class="main-player__content__infos">
-            <h2>Nom du récit sur une thématique</h2>
-            <p>Nom prénom de l'auteur</p>
+            <h2 id="mainName">Nom du récit</h2>
+            <p id="mainAuthor">Nom de l'auteur</p>
           </div>
+
           <div class="main-player__content__main-interaction">
             <button><img src="public/icons/prev.svg" alt="precedent"></button>
-            <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
-                id="mainPlayPause"></button>
+            <button class="btn-gray" id="mainPlayPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
+                id="mainIcon"></button>
             <button><img src="public/icons/next.svg" alt="suivant"></button>
           </div>
+
           <div class="main-player__content__interaction">
             <button><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
             <button><img src="public/icons/plus-circle.svg" alt="favorit" class="icon"></button>
             <button><img src="public/icons/speaker.svg" alt="volume" class="icon"></button>
-            <!-- <input type="range"> -->
+            <input type="range" class="progress" value="50">
           </div>
+
         </div>
-        <input type="range" class="progress" value="1">
+        <input type="range" class="progress progressAudio" value="0" id="mainProgress">
       </div>
     </article>
   </main>
