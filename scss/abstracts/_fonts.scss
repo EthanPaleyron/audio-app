@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("../fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("../fonts/GeneralSans-Medium.woff") format("woff"),
+    url("../fonts/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+// font sizing
+$font-xl: 2.25em; // 36px / 16px
+$font-l: 2.25em; // 36px / 16px
+$font-m: 1.5em; // 24px / 16px
+$font-s: 1.125em; // 18px / 16px
+$font-xs: 0.875em; // 14px / 16px
+
+$font-xl-responsive: 0.5em;
+$font-l-responsive: 0.375em;
+$font-m-responsive: 0.375em;
+$font-s-responsive: 0.375em;
+$font-xs-responsive: 0.375em;
+
+// font family
+$font-family: "GeneralSans-Medium";

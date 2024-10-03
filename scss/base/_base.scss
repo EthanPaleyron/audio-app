@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: $font-family, serif;
+  color: $b;
+  background-color: $lw;
+  display: flex;
+}
+
+main {
+  margin-left: 18rem;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+// default table styles
+table {
+  th,
+  td {
+    padding: 0.7rem;
+    border: 1px solid $g;
+  }
+}
+
+// default champs styles
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="(number)"],
+input[type="email"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea {
+  border: none;
+}

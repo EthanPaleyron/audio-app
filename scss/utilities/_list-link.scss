@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.list-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  li {
+    &.selected {
+      color: $orange;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

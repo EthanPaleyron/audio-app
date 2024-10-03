@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+@mixin tag($color, $bgc) {
+  background-color: $bgc;
+  color: $color;
+}
+
+.tag {
+  @include tag($g, $w);
+
+  &-green {
+    @include tag($b, $green);
+  }
+}

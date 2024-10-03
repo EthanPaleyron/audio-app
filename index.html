@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>App music</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/scss/main.scss">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <aside class="aside-left">
+    <div>
+      <img src="public/logo.png" alt="Logo">
+      <h1>Audio App</h1>
+    </div>
+
+    <nav>
+      <h2>MENU</h2>
+      <ul class="list-link">
+        <nav-list href="/" selected icon="ph-fill ph-house-simple">Home</nav-list>
+        <nav-list href="/categories" icon="ph ph-squares-four">Categories</nav-list>
+        <nav-list href="/favorits" icon="ph ph-heart-straight">Favoris</nav-list>
+        <nav-list href="/enregistement" icon="ph ph-microphone">Enregister un récit</nav-list>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <nav>
+      <div class="search-bar">
+        <input type="search" placeholder="Search">
+        <i class="ph ph-magnifying-glass"></i>
+      </div>
+      <p>Username</p>
+      <img src="public/pp.jpg" alt="Photo de profile">
+    </nav>
+
+    <!-- <section class="suggestion">
+      <div class="suggestion__top">
+        <div class="suggestion__top__content_h2_list">
+          <h2>Suggestion</h2>
+          <ul>
+            <li class="selected"><button>Nouveau</button></li>
+            <li><button>Sport</button></li>
+          </ul>
+        </div>
+        <div class="suggestion__top__content_button">
+          <a href="/enregistement" class="btn-orange"><i class="ph-fill ph-microphone"></i> Enregistrer un récit</a>
+        </div>
+      </div>
+
+      <div class="suggestion__audios">
+        <article>
+          <div>
+            <img src="public/Image.png" alt="image">
+            <button class="favorit"><i class="ph ph-heart"></i></button>
+            <span class="categorie">Categorie</span>
+          </div>
+          <h3>Titre de l'audio</h3>
+        </article>
+        <article>
+          <div>
+            <img src="public/Image.png" alt="image">
+            <button class="favorit"><i class="ph ph-heart"></i></button>
+            <span class="categorie">Categorie</span>
+          </div>
+          <h3>Titre de l'audio</h3>
+        </article>
+        <article>
+          <div>
+            <img src="public/Image.png" alt="image">
+            <button class="favorit"><i class="ph ph-heart"></i></button>
+            <span class="categorie">Categorie</span>
+          </div>
+          <h3>Titre de l'audio</h3>
+        </article>
+        <article>
+          <div>
+            <img src="public/Image.png" alt="image">
+            <button class="favorit"><i class="ph ph-heart"></i></button>
+            <span class="categorie">Categorie</span>
+          </div>
+          <h3>Titre de l'audio</h3>
+        </article>
+        <article>
+          <div>
+            <img src="public/Image.png" alt="image">
+            <button class="favorit"><i class="ph ph-heart"></i></button>
+            <span class="categorie">Categorie</span>
+          </div>
+          <h3>Titre de l'audio</h3>
+        </article>
+      </div>
+    </section> -->
+
+    <div class="players">
+      <article class="player">
+        <img src="public/Image.png" alt="image">
+        <div class="player__content_progress">
+          <div class="player__content">
+            <div class="player__content__infos">
+              <div>
+                <h2>Nom du récit sur une thématique</h2>
+                <p>Nom prénom de l'auteur</p>
+              </div>
+              <p><span class="currentTime" data-player="0">0 min 00 sec</span> sur <span class="totalTime"
+                  data-player="0"></span>
+              </p>
+            </div>
+            <div class="player__content__interaction">
+              <button class="favorit-lw"><i class="ph ph-heart"></i></button>
+              <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play"
+                  data-player="0"></button>
+            </div>
+          </div>
+          <input type="range" class="progress" value="0" data-player="0">
+        </div>
+        <audio data-player="0">
+          <source src="public/audios/Musique Douce Relaxante.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+
+      <article class="player">
+        <img src="public/Image.png" alt="image">
+        <div class="player__content_progress">
+          <div class="player__content">
+            <div class="player__content__infos">
+              <div>
+                <h2>Nom du récit sur une thématique</h2>
+                <p>Nom prénom de l'auteur</p>
+              </div>
+              <p><span class="currentTime" data-player="1">0 min 00 sec</span> sur <span class="totalTime"
+                  data-player="1"></span>
+              </p>
+            </div>
+            <div class="player__content__interaction">
+              <button class="favorit-lw"><i class="ph ph-heart"></i></button>
+              <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play"
+                  data-player="1"></button>
+            </div>
+          </div>
+          <input type="range" class="progress" value="1" data-player="1">
+        </div>
+        <audio data-player="1">
+          <source src="public/audios/PHONK.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+    </div>
+  </main>
+
+  <script type="module" src="/js/audio-player.js"></script>
+  <script type="module" src="/js/custom-elements/list.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.aside-left {
+  position: fixed;
+  width: 18rem;
+  background-color: $w;
+  padding: 1.9rem 0 0 1.9rem;
+  height: 100vh;
+  div {
+    margin-bottom: 4.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav {
+    h2 {
+      color: $g;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

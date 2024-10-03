@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.search-bar {
+  position: relative;
+  input {
+    width: clamp(150px, 37vw, 1920px);
+    padding: 0.3rem 1rem 0.3rem 3rem;
+    border-radius: 999px;
+
+    &::placeholder {
+      color: $g;
+    }
+  }
+  i {
+    color: $g;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.3rem 0 0 1rem;
+  }
+}

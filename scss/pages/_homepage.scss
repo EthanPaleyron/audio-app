@@ -1,0 +1,88 @@
+@use "../abstracts/" as *;
+
+main {
+  padding: 2.6rem 10%;
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    p {
+      color: $g;
+    }
+    img {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+    }
+  }
+
+  .suggestion {
+    margin-top: 2.6rem;
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &__content_h2_list {
+        h2 {
+          font-size: $font-m;
+        }
+        ul {
+          display: flex;
+          gap: 0.5rem;
+          li {
+            color: $g;
+            &.selected {
+              color: $orange;
+            }
+          }
+        }
+      }
+      &__content_button {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__audios {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) 2fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1.3rem;
+      article {
+        width: fit-content;
+        div {
+          position: relative;
+          img {
+            width: 18.7rem;
+            height: 16.2rem;
+            border-radius: 4%;
+          }
+        }
+        .favorit {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+        }
+        .categorie {
+          position: absolute;
+          bottom: 0.5rem;
+          left: 0.5rem;
+        }
+        h3 {
+          padding: 1rem 0.7rem;
+          font-size: $font-s;
+        }
+      }
+    }
+  }
+
+  .players {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+}

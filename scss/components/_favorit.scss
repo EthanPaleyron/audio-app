@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+@mixin favorit($color: $w) {
+  width: 2rem;
+  height: 2rem;
+  color: $b;
+  background-color: $color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorit {
+  @include favorit();
+  &-lw {
+    @include favorit($lw);
+  }
+}
