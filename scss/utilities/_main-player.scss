@@ -1,7 +1,9 @@
 @use "../abstracts" as *;
 
 .main-player {
-  width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 85%;
   height: 6.2rem;
   background-color: $w;
   display: flex;
@@ -46,5 +48,6 @@
   .progressAudio {
     position: absolute;
     bottom: 0;
+    margin: 0.4rem;
   }
 }
