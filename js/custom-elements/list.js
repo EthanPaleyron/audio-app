@@ -15,9 +15,9 @@ class NavList extends HTMLElement {
     const aAttr = this.getAttribute("href");
     a.href = aAttr;
 
-    const icon = document.createElement("i");
+    const icon = document.createElement("img");
     const iconAttr = this.getAttribute("icon");
-    icon.className = iconAttr;
+    icon.src = iconAttr;
 
     const slot = document.createElement("slot");
 
