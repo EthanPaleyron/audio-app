@@ -1,7 +1,6 @@
 @use "../abstracts/" as *;
 
 main {
-  width: 100%;
   .main-content {
     padding: 2.6rem 10%;
     nav {
@@ -63,7 +62,7 @@ main {
       margin: 2.4rem 0 3.7rem;
       display: grid;
       justify-content: center;
-      grid-template-areas: "a a";
+      grid-template-areas: "a";
       gap: 2.5rem;
     }
 
@@ -79,6 +78,7 @@ main {
       &__audios {
         margin: 1rem 0 1.5rem;
         overflow-x: scroll;
+        scroll-snap-type: x proximity;
         display: flex;
         gap: 1.2rem;
         article div {
@@ -92,7 +92,7 @@ main {
           border-radius: 10px;
         }
         &::-webkit-scrollbar-track {
-          margin: 0 21rem;
+          margin: 0 clamp(10px, 40vh, 200px);
           background: $g;
           border-radius: 10px;
         }
