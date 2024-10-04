@@ -1,29 +1,30 @@
 @use "../abstracts" as *;
 
 .card-audio {
-  width: fit-content;
+  height: 100%;
   div {
     position: relative;
     img {
+      width: 100%;
       border-radius: 4%;
     }
-  }
-  .favorit {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
+    .favorit {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .categorie {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0.5rem;
     }
   }
-  .categorie {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
   h3 {
-    padding: 1rem 0.7rem;
+    padding: 1rem 0.7rem 1.5rem;
     font-size: $font-s;
   }
 }

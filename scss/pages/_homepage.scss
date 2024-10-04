@@ -52,9 +52,30 @@ main {
       &__audios {
         margin-top: 1.5rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr) 2fr;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 1.3rem;
+        gap: 0 1.3rem;
+        article {
+          min-width: 10.5rem;
+          width: 14.7vw;
+          &:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+          &:nth-child(2) {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+          &:nth-child(3) {
+            min-width: 27rem;
+            width: 34.5vw;
+            grid-area: 1 / 3 / 3 / 5;
+          }
+          &:nth-child(4) {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+          &:nth-child(5) {
+            grid-area: 2 / 2 / 3 / 3;
+          }
+        }
       }
     }
 
