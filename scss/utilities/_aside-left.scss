@@ -6,6 +6,7 @@
   background-color: $w;
   padding: 1.9rem 0 0 1.9rem;
   height: 100vh;
+  max-width: 18rem;
   div {
     margin-bottom: 4.5rem;
     display: flex;
@@ -18,5 +19,11 @@
       color: $g;
       margin-bottom: 1.5rem;
     }
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .aside-left {
+    display: none;
   }
 }
