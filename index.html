@@ -5,7 +5,7 @@
   <title>App music</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/scss/main.scss">
+  <link rel="stylesheet" href="src/scss/main.scss">
 </head>
 
 <body>
@@ -15,6 +15,8 @@
       <img src="public/logo.png" alt="Logo">
       <h1>Audio App</h1>
     </div>
+
+    <button id="btnMenu">MENU</button>
 
     <nav>
       <h2>MENU</h2>
@@ -127,33 +129,6 @@
             Your browser does not support the audio element.
           </audio>
         </article>
-
-        <article class="player">
-          <img src="public/Image.png" alt="image">
-          <div class="player__content_progress">
-            <div class="player__content">
-              <div class="player__content__infos">
-                <div>
-                  <h2 class="nameAudio" data-player="1">Nom du récit sur une thématique</h2>
-                  <p class="authorAudio" data-player="1">Nom prénom de l'auteur</p>
-                </div>
-                <p><span class="currentTime" data-player="1">0 min 00 sec</span> sur <span class="totalTime"
-                    data-player="1"></span>
-                </p>
-              </div>
-              <div class="player__content__interaction">
-                <button class="favorit-lw"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-                <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
-                    data-player="1"></button>
-              </div>
-            </div>
-            <input type="range" class="progress" value="1" data-player="1">
-          </div>
-          <audio data-player="1">
-            <source src="public/audios/PHONK.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </article>
       </div>
 
       <section class="other-categories">
@@ -216,6 +191,17 @@
           </article>
         </div>
       </section>
+
+      <ul class="buttons-list">
+        <li>
+          <button class="btn-gray"><img src="public/icons/magnifying-glass.svg" alt="recherche">Rechercher</button>
+        </li>
+        <li>
+          <a href="/enregistement" class="btn-orange"><img src="public/icons/microphone-fill.svg" alt="Enregistrement"
+              class="icon">
+            Enregistrement</a>
+        </li>
+      </ul>
     </div>
 
     <article class="main-player">
@@ -247,8 +233,8 @@
     </article>
   </main>
 
+  <script type="module" src="/src/js/app.js"></script>
   <script type="module" src="/js/audio-player.js"></script>
-  <script type="module" src="/js/custom-elements/list.js"></script>
 </body>
 
 </html>

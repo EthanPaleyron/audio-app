@@ -1,4 +1,6 @@
-@use "../abstracts" as *;
+@use "../../scss/base/" as *;
+@use "../../scss/abstracts" as *;
+@use "../../scss/components/" as *;
 
 .player {
   width: 38.2rem;
@@ -40,11 +42,5 @@
     position: absolute;
     bottom: 0;
     margin: 0.4rem;
-  }
-}
-
-@media screen and (max-width: 912px) {
-  .player {
-    display: none;
   }
 }

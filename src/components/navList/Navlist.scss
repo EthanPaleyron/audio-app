@@ -1,0 +1,14 @@
+@use "../../scss/base/" as *;
+@use "../../scss/abstracts" as *;
+@use "../../scss/components/" as *;
+
+.nav-item {
+  &.selected {
+    color: $orange;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

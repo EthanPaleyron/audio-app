@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+.list-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
