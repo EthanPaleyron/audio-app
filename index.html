@@ -5,24 +5,24 @@
   <title>App music</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/scss/main.scss">
+  <link rel="stylesheet" href="/src/scss/main.scss">
 </head>
 
 <body>
 
   <aside class="aside-left">
     <div>
-      <img src="public/logo.png" alt="Logo">
+      <img src="logo.png" alt="Logo">
       <h1>Audio App</h1>
     </div>
 
     <nav>
       <h2>MENU</h2>
       <ul class="list-link">
-        <nav-list href="/" selected icon="public/icons/house-fill.svg">Home</nav-list>
-        <nav-list href="/categories" icon="public/icons/squares.svg">Categories</nav-list>
-        <nav-list href="/favorits" icon="public/icons/heart.svg">Favoris</nav-list>
-        <nav-list href="/enregistement" icon="public/icons/microphone.svg">Enregister un récit</nav-list>
+        <nav-list href="/" selected icon="icons/house-fill.svg">Home</nav-list>
+        <nav-list href="/categories" icon="icons/squares.svg">Categories</nav-list>
+        <nav-list href="/favorits" icon="icons/heart.svg">Favoris</nav-list>
+        <nav-list href="/enregistement" icon="icons/microphone.svg">Enregister un récit</nav-list>
       </ul>
     </nav>
   </aside>
@@ -33,11 +33,11 @@
         <div class="search-bar">
           <input type="search" placeholder="Search" id="search">
           <label for="search">
-            <img src="public/icons/magnifying-glass.svg" alt="recherche" class="icon">
+            <img src="icons/magnifying-glass.svg" alt="recherche" class="icon">
           </label>
         </div>
         <p>Username</p>
-        <img src="public/pp.jpg" alt="Photo de profile" class="pp">
+        <img src="pp.jpg" alt="Photo de profile" class="pp">
       </nav>
 
       <!-- <section class="suggestion">
@@ -50,7 +50,7 @@
             </ul>
           </div>
           <div class="suggestion__top__content_button">
-            <a href="/enregistement" class="btn-orange"><img src="public/icons/microphone-fill.svg" alt="Enregistrement"
+            <a href="/enregistement" class="btn-orange"><img src="icons/microphone-fill.svg" alt="Enregistrement"
                 class="icon">
               Enregistrer un récit</a>
           </div>
@@ -59,8 +59,8 @@
         <div class="suggestion__audios">
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
@@ -70,7 +70,7 @@
 
       <div class="players">
         <article class="player">
-          <img src="public/Image.png" alt="image">
+          <img src="Image.png" alt="image">
           <div class="player__content_progress">
             <div class="player__content">
               <div class="player__content__infos">
@@ -83,21 +83,21 @@
                 </p>
               </div>
               <div class="player__content__interaction">
-                <button class="favorit-lw"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-                <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
+                <button class="favorit-lw"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
+                <button class="btn-orange playPause"><img src="icons/play-fill.svg" alt="play" class="icon"
                     data-player="0"></button>
               </div>
             </div>
             <input type="range" class="progress" value="0" data-player="0">
           </div>
           <audio data-player="0">
-            <source src="public/audios/Musique Douce Relaxante.mp3" type="audio/mpeg">
+            <source src="audios/Musique Douce Relaxante.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
         </article>
 
         <article class="player">
-          <img src="public/Image.png" alt="image">
+          <img src="Image.png" alt="image">
           <div class="player__content_progress">
             <div class="player__content">
               <div class="player__content__infos">
@@ -110,15 +110,15 @@
                 </p>
               </div>
               <div class="player__content__interaction">
-                <button class="favorit-lw"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-                <button class="btn-orange playPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
+                <button class="favorit-lw"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
+                <button class="btn-orange playPause"><img src="icons/play-fill.svg" alt="play" class="icon"
                     data-player="1"></button>
               </div>
             </div>
             <input type="range" class="progress" value="1" data-player="1">
           </div>
           <audio data-player="1">
-            <source src="public/audios/PHONK.mp3" type="audio/mpeg">
+            <source src="audios/PHONK.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
         </article>
@@ -128,56 +128,56 @@
         <div class="other-categories__title">
           <h2>Dans d'autre catégories</h2>
           <div>
-            <button><img src="public/icons/caret-left.svg" alt="gauche"></button>
-            <button><img src="public/icons/caret-right.svg" alt="droite"></button>
+            <button><img src="icons/caret-left.svg" alt="gauche"></button>
+            <button><img src="icons/caret-right.svg" alt="droite"></button>
           </div>
         </div>
 
         <div class="other-categories__audios">
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
           </article>
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
           </article>
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
           </article>
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
           </article>
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
           </article>
           <article class="card-audio">
             <div>
-              <img src="public/Image.png" alt="image">
-              <button class="favorit"><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
+              <img src="Image.png" alt="image">
+              <button class="favorit"><img src="icons/heart.svg" alt="coeur" class="icon"></button>
               <span class="categorie">Categorie</span>
             </div>
             <h3>Titre de l'audio</h3>
@@ -186,37 +186,43 @@
       </section>
     </div>
 
-    <article class="main-player">
-      <img src="public/Image.png" alt="image" class="main-player__image">
-      <div class="main-player__content_progress">
-        <div class="main-player__content">
-          <div class="main-player__content__infos">
-            <h2 id="mainName">Nom du récit</h2>
-            <p id="mainAuthor">Nom de l'auteur</p>
-          </div>
+      <article class="main-player">
+        <img src="Image.png" alt="image" class="main-player__image">
+        <div class="main-player__content_progress">
+          <div class="main-player__content">
+            <div class="main-player__content__infos">
+              <h2 id="mainName">Nom du récit</h2>
+              <p id="mainAuthor">Nom de l'auteur</p>
+            </div>
 
-          <div class="main-player__content__main-interaction">
-            <button><img src="public/icons/prev.svg" alt="precedent"></button>
-            <button class="btn-gray" id="mainPlayPause"><img src="public/icons/play-fill.svg" alt="play" class="icon"
-                id="mainIcon"></button>
-            <button><img src="public/icons/next.svg" alt="suivant"></button>
-          </div>
+            <div class="main-player__content__main-interaction">
+              <button><img src="icons/prev.svg" alt="precedent"></button>
+              <button class="btn-gray" id="mainPlayPause"><img src="icons/play-fill.svg" alt="play" class="icon"
+                  id="mainIcon"></button>
+              <button><img src="icons/next.svg" alt="suivant"></button>
+            </div>
 
-          <div class="main-player__content__interaction">
-            <button><img src="public/icons/heart.svg" alt="coeur" class="icon"></button>
-            <button><img src="public/icons/plus-circle.svg" alt="favorit" class="icon"></button>
-            <button><img src="public/icons/speaker.svg" alt="volume" class="icon"></button>
-            <input type="range" class="progress" value="50">
-          </div>
+            <div class="main-player__content__interaction">
+              <button><img src="icons/heart.svg" alt="coeur" class="icon"></button>
+              <button><img src="icons/plus-circle.svg" alt="favorit" class="icon"></button>
+              <button><img src="icons/speaker.svg" alt="volume" class="icon"></button>
+              <input type="range" class="progress" value="50">
+            </div>
 
+          </div>
+          <input type="range" class="progress progressAudio" value="0" id="mainProgress">
         </div>
-        <input type="range" class="progress progressAudio" value="0" id="mainProgress">
-      </div>
-    </article>
+      </article>
+
+      <mini-audio-player
+        src="audios/PHONK.mp3"
+        name="Nom du récit sur une thématique"
+        author="Nom prénom de l'auteur"
+        data-player="0">
+      </mini-audio-player>
+      <ce-button>un button</ce-button>
   </main>
 
-  <script type="module" src="/js/audio-player.js"></script>
-  <script type="module" src="/js/custom-elements/list.js"></script>
+  <script type="module" src="/src/js/app.js"></script>
 </body>
-
 </html>

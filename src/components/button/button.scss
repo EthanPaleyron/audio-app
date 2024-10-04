@@ -1,0 +1,34 @@
+:host {
+    display: inline-block;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        opacity 0.3s;
+    font-size: 16px;
+}
+
+button:focus {
+    outline: 3px solid hotpink;
+    outline-offset: 2px;
+}
+
+button.primary {
+    background-color: hotpink;
+    color: white;
+}
+
+button.secondary {
+    background-color: lightcoral;
+    color: white;
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

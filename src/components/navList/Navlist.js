@@ -1,10 +1,19 @@
+import cssText from "./Navlist.scss?inline";
+
 class NavList extends HTMLElement {
+  static sheet;
+
   constructor() {
     super();
-
-    // Initialisez votre composant
     this.attachShadow({ mode: "open" });
+    this.applyStyles();
     this.render();
+  }
+
+  applyStyles() {
+    const sheet = new CSSStyleSheet();
+    sheet.replaceSync(cssText.toString());
+    this.shadowRoot.adoptedStyleSheets = [sheet];
   }
 
   render() {
