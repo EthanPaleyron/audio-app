@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+.list-link-mobile {
+  display: none;
+}
+
 main {
   .main-content {
     padding: 2.6rem 10%;
@@ -119,18 +123,35 @@ main {
     }
   }
   .buttons-list {
-    display: flex;
-    justify-content: space-between;
-    li {
-      a img,
-      button img {
-        filter: $filter-w;
-      }
-    }
+    display: none;
   }
 }
 
 @media screen and (max-width: 1124px) {
+  .list-link-mobile {
+    z-index: 1;
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    background-color: $w;
+    padding: 0.7rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      p {
+        color: $g;
+      }
+      .pp {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
   nav {
     display: none !important;
   }
@@ -185,6 +206,17 @@ main {
     &__audios {
       &::-webkit-scrollbar-track {
         margin: 0 clamp(10px, 10vh, 200px) !important;
+      }
+    }
+  }
+
+  .buttons-list {
+    display: flex !important;
+    justify-content: space-between;
+    li {
+      a img,
+      button img {
+        filter: $filter-w;
       }
     }
   }
