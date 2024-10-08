@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>App music</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/scss/main.scss">
+</head>
+
+<body>
+    <aside class="aside-left">
+        <div>
+            <img src="../public/logo.png" alt="Logo">
+            <h1>Audio App</h1>
+        </div>
+
+        <button id="btnMenu">MENU</button>
+
+        <nav>
+            <h2>MENU</h2>
+            <ul class="list-link">
+                <nav-list href="/" selected icon="../public/icons/house-fill.svg">Home</nav-list>
+                <nav-list href="/categories" icon="../public/icons/squares.svg">Categories</nav-list>
+                <nav-list href="/favorits" icon="../public/icons/heart.svg">Favoris</nav-list>
+                <nav-list href="enregistrement.html" icon="../public/icons/microphone.svg">Enregister un
+                    récit</nav-list>
+            </ul>
+        </nav>
+    </aside>
+
+    <ul class="list-link-mobile">
+        <div>
+            <p>Username</p>
+            <img src="../public/pp.jpg" alt="Photo de profile" class="pp">
+        </div>
+        <nav-list href="/" selected icon="../public/icons/house-fill.svg">Home</nav-list>
+        <nav-list href="/categories" icon="../public/icons/squares.svg">Categories</nav-list>
+        <nav-list href="/favorits" icon="../public/icons/heart.svg">Favoris</nav-list>
+        <nav-list href="pages/enregistrement.html" icon="../public/icons/microphone.svg">Enregister un récit</nav-list>
+    </ul>
+
+    <main class="enregistrement">
+        <div class="main-content">
+            <section class="content-recit">
+                <h2>Bienvenue !</h2>
+                <p>Vous êtes sur le point de partager une histoire, un conseil ou une expérience unique avec toute la
+                    communauté. Voici
+                    quelques astuces pour que votre récit soit captivant et respecté de tous !</p>
+                <a href="/" class="btn-white">Comment réussir son récit</a>
+            </section>
+
+            <div class="registration">
+                <button class="custom-button" id="registration">
+                    <img src="../public/icons/microphone-fill.svg" alt="microphone">
+                </button>
+                <p id="time">00:00</p>
+            </div>
+        </div>
+
+        <article class="main-player">
+            <img src="../public/Image.png" alt="image" class="main-player__image">
+            <div class="main-player__content_progress">
+                <div class="main-player__content">
+                    <div class="main-player__content__infos">
+                        <h2 id="mainName">Nom du récit</h2>
+                        <p id="mainAuthor">Nom de l'auteur</p>
+                    </div>
+
+                    <div class="main-player__content__main-interaction">
+                        <button><img src="../public/icons/prev.svg" alt="precedent"></button>
+                        <button class="btn-gray" id="mainPlayPause"><img src="../public/icons/play-fill.svg" alt="play"
+                                class="icon" id="mainIcon"></button>
+                        <button><img src="../public/icons/next.svg" alt="suivant"></button>
+                    </div>
+
+                    <div class="main-player__content__interaction">
+                        <button><img src="../public/icons/heart.svg" alt="coeur" class="icon"></button>
+                        <button><img src="../public/icons/plus-circle.svg" alt="favorit" class="icon"></button>
+                        <button><img src="../public/icons/speaker.svg" alt="volume" class="icon"></button>
+                        <input type="range" class="progress" value="50">
+                    </div>
+
+                </div>
+                <input type="range" class="progress progressAudio" value="0" id="mainProgress">
+            </div>
+        </article>
+    </main>
+
+    <script type="module" src="../src/js/app.js"></script>
+    <script type="module" src="../js/audio-player.js"></script>
+    <script type="module" src="../js/burger-menu.js"></script>
+</body>
+
+</html>

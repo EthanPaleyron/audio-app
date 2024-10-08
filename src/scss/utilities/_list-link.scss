@@ -1,8 +1,41 @@
 @use "../abstracts" as *;
 
+.list-link-mobile {
+  display: none;
+}
+
 .list-link {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 1124px) {
+  .list-link-mobile {
+    z-index: 1;
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    background-color: $w;
+    padding: 0.7rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      p {
+        color: $g;
+      }
+      .pp {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  nav {
+    display: none !important;
+  }
 }

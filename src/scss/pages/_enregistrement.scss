@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+main.enregistrement {
+  .main-content {
+    padding: 12rem 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .content-recit {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.3rem;
+      h2 {
+        font-size: $font-m;
+      }
+      a {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .registration {
+      margin-top: 13.6rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: solid 2px $g;
+      .custom-button {
+        margin-bottom: 8.5rem;
+        position: relative;
+        width: 12.5rem;
+        height: 12.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle, $orange 20%, transparent 30%);
+          background-size: 25px 25px;
+        }
+        &::after {
+          transform: rotate(90deg);
+        }
+        img {
+          z-index: 1;
+          width: 4.5rem;
+        }
+      }
+      #time {
+        margin-bottom: 1rem;
+        width: 100%;
+        color: $orange;
+        font-size: $font-m;
+      }
+    }
+  }
+}
