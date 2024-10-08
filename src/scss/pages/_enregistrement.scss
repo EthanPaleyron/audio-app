@@ -28,7 +28,6 @@ main.enregistrement {
       flex-direction: column;
       border-bottom: solid 2px $g;
       .custom-button {
-        margin-bottom: 8.5rem;
         position: relative;
         width: 12.5rem;
         height: 12.5rem;
@@ -55,6 +54,10 @@ main.enregistrement {
           z-index: 1;
           width: 4.5rem;
         }
+      }
+      .btn-white {
+        margin: 1rem 0 8.5rem;
+        color: $orange;
       }
       #time {
         margin-bottom: 1rem;
